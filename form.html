@@ -15,53 +15,52 @@
     <body>
         <form action = "download.cfm" method="POST" class="ml-5">
             <div id = "myForm">
-            <h2>Enter your details</h2><br>
+            <h2 class="mt-4">Enter your details</h2><br>
             <label for="nameText">Enter your name</label>
-            <input type="text" id = "nameText" name = "nameText" placeholder="Name">
-            <br><br>
+            <input type="text" id = "nameText" name = "nameText" placeholder="Name" class="input-group col-6">  
+            <br>
             <label for="picInput">Upload your picture</label>
-            <input type="file" id = "picInput" name = "picInput">
-            <br><br>
+            <input type="file" id = "picInput" name = "picInput" class="input-group col-6">
+            <br>
             <label for="jobText">Enter your job title</label>
-            <input type="text" id = "jobText" name = "jobText" placeholder="Job Title">
-            <br><br>
+            <input type="text" id = "jobText" name = "jobText" placeholder="Job Title" class="input-group col-6">
+            <br>
             <label for="emailText">Enter your email</label>
-            <input type="email" name="emailText" id = "emailText" placeholder="Email">
-            <br><br>
+            <input type="email" name="emailText" id = "emailText" placeholder="Email" class="input-group col-6">
+            <br>
             <label for="websiteText">Enter your Website</label>
-            <input type="text" name="websiteText" id = "websiteText" placeholder="Website">
-            <br><br>
+            <input type="text" name="websiteText" id = "websiteText" placeholder="Website" class="input-group col-6">
+            <br>
             <label for="phoneText">Enter your mobile number</label>
-            <input type="number" name="phoneText" id = "phoneText" placeholder="Mobile number">
-            <br><br>
+            <input type="number" name="phoneText" id = "phoneText" placeholder="Mobile number" class="input-group col-6">
+            <br>
             <label for="personalSection">Enter your personal profile</label><br>
-            <textarea name="personalSection" id="personalSection" cols="100" rows="4" placeholder="Personal Information"></textarea>
-            <br><br>
+            <textarea name="personalSection" id="personalSection" cols="100" rows="4" placeholder="Personal Information" class="input-group col-6"></textarea>
+            <br>
+            <section id = "workSection">
             <label for="workSection">Enter your work experience</label><br>
-            <input type="text" placeholder="Job Title" name = "JobTitle" id = "jobTitle"><br><br>
-            <textarea rows="4" cols="100" placeholder="Work Experience" name = "WorkExperience" id = "workExperience"></textarea>&nbsp;&nbsp;<span class = "remove"><input type="button" value="Remove" class = "btn btn-primary" onclick="removeElement()"></span>
-            <br><span class="add"><input type="button" class="btn btn-primary" value="Add" onclick="textareaFunction()"></span>
+            <input type="text" placeholder="Job Title" name = "JobTitle" id = "jobTitle" class="input-group col-6"><br>
+            <textarea rows="4" cols="100" placeholder="Work Experience" name = "WorkExperience" id = "workExperience" class="input-group col-6"></textarea>&nbsp;&nbsp;
+            <br>
+            </section>
+            <span class="add"><input type="button" class="btn btn-dark" value="Add Work" onclick="textareaFunction()"></span>
+            <span class="remove"><input type="button" class="btn btn-dark ml-5" value="Remove" onclick="removeElement()"></span>
             <br><br>
+            <section id = "SkillSection">
             <label>Key skills</label>
             <br>
-            <input type="text" placeholder="Key skills" id="skill_1" name="skill_1">
-            <br><br>
-            <input type="text" placeholder="Key skills" id="skill_2" name="skill_2">
-            <br><br>
-            <input type="text"  placeholder="Key skills" id="skill_3" name="skill_3">
-            <br><br>
-            <input type="text"  placeholder="Key skills" id="skill_4" name="skill_4">
-            <br><br>
-            <input type="text" placeholder="Key skills" id="skill_5"name="skill_5">
+            <input type="text" placeholder="Skill" id="Skills" name="Skills" class="input-group col-6">
+            <br>
+            </section>
+            <span class="add"><input type="button" class="btn btn-dark" value="Add Skill" onclick="skillFunction()"></span>
             <br><br>
             <label for="workSection">Education Details</label><br>
-            <input type="text" placeholder="Collage/University" name = "collage" id = "jobTitle"><br><br>
-            <input placeholder="qualification" name = "qualification" id = "qualification">&nbsp;&nbsp;<span class = "remove">
-            </span>
-            <br><span class="add"></span>
-            <br><br>
-            </div>
-            <input type="submit" value = "Submit" name = "submit" style="position: relative;">
+            <input type="text" placeholder="College/University" name = "College" id = "College" class="input-group col-6"><br>
+            <input type="text" placeholder="Qualification" name = "Qualification" id = "Qualification" class="input-group col-6">
+            <br>
+            <span class="add"><input type="button" class="btn btn-dark" value="Add Education" onclick="educationFunction()"></span>
+            </div><br><br>
+            <input type="submit" value = "Submit" name = "submit" class="btn btn-primary">
         </form>
     </body>
 </html>
