@@ -1,3 +1,5 @@
+<cffile action = "upload" destination = "C:\ColdFusion11\cfusion\wwwroot\formToPDF" nameconflict = "overwrite">
+<cfcontent type = "" deleteFile = "[ ]" file = "[ ]" variable = "[ ]" reset = "[ ]">
 <cfdocument format = "PDF" overwrite = "yes" saveAsName = "#form.nameText#_Resume.pdf">
 <cfoutput>
 <html>
@@ -9,7 +11,7 @@
 <div id="cv">
 	<div class="mainDetails">
 		<div id="headshot">
-			<img src="#form.picInput#" alt="" />
+			<cfimage source = "#form.picInput#" action = "writeToBrowser">
 		</div>
 		<div id="name">
 			<h1>#form.nameText#</h1>
@@ -56,7 +58,7 @@
 					<p class="subDetails">October 2004 - December 2006</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
 				</article>--->
-			</div>
+			<!---</div>
 			<div class="clear"></div>
 		</section>
 		<section>
@@ -88,7 +90,7 @@
 					<h2>College/University</h2>
 					<p class="subDetails">Qualification</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>--->
+				</article>--->--->
 			</div>
 			<div class="clear"></div>
 		</section>		

@@ -9,7 +9,7 @@
 <div id="cv" class="instaFade">
 	<div class="mainDetails">
 		<div id="headshot">
-			<img src="headshot.jpg" alt="" />
+			<img src="#form.picInput#" alt="" />
 		</div>
 		
 		<div id="name">
