@@ -1,5 +1,4 @@
 <cffile action = "upload" destination = "C:\ColdFusion11\cfusion\wwwroot\formToPDF" nameconflict = "overwrite">
-<cfcontent type = "" deleteFile = "[ ]" file = "[ ]" variable = "[ ]" reset = "[ ]">
 <cfdocument format = "PDF" overwrite = "yes" saveAsName = "#form.nameText#_Resume.pdf">
 <cfoutput>
 <html>
@@ -38,40 +37,37 @@
 			</article>
 			<div class="clear"></div>
 		</section>
+		<hr>
 		<section>
 			<div class="sectionTitle">
 				<h1>Work Experience</h1>
 			</div>
 			<div class="sectionContent">
-				<article>
-					<h2>#form.JobTitle#</h2>
-					<!---<p class="subDetails">April 2011 - Present</p>--->
-					<p>#form.WorkExperience#</p>
-				</article>
-				<!---<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">Janruary 2007 - March 2011</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>
-				<article>
-					<h2>Job Title at Company</h2>
-					<p class="subDetails">October 2004 - December 2006</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim. Vestibulum bibendum mattis dignissim. Proin id sapien quis libero interdum porttitor.</p>
-				</article>--->
-			<!---</div>
+				<cfloop list = "#form.fieldnames#" index = "i">
+					<article>
+						<cfif FindNoCase("JobTitle",i) gt 0>
+							<h3>#form[i]#</h3>
+						</cfif>
+						<cfif FindNoCase("Work", i) gt 0>
+							<p>#form[i]#</p>
+						</cfif>
+					</article>
+				</cfloop>
+			</div>
 			<div class="clear"></div>
 		</section>
+		
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
 			</div>
 			<div class="sectionContent">
 				<ul class="keySkills">
-					<li>#form.skill_1#</li>
-					<li>#form.skill_2#</li>
-					<li>#form.skill_3#</li>
-					<li>#form.skill_4#</li>
-					<li>#form.skill_5#</li>
+					<cfloop list = "#form.fieldnames#" index = "i">
+						<cfif FindNoCase("Skill", i) gt 0>
+							<li>#form[i]#</li>
+						</cfif>
+					</cfloop>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -81,16 +77,16 @@
 				<h1>Education</h1>
 			</div>			
 			<div class="sectionContent">
-				<!---<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>				
-				<article>
-					<h2>College/University</h2>
-					<p class="subDetails">Qualification</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies massa et erat luctus hendrerit. Curabitur non consequat enim.</p>
-				</article>--->--->
+				<cfloop index = "i" list = "#form.fieldnames#">
+					<article>
+						<cfif FindNoCase("College", i) gt 0>
+							<h3>#form[i]#</h3>
+						</cfif>
+						<cfif FindNoCase("Qualification", i) gt 0>
+							<p class="subDetails">#form[i]#</p>
+						</cfif>
+					</article>
+				</cfloop>
 			</div>
 			<div class="clear"></div>
 		</section>		
