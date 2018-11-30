@@ -56,7 +56,7 @@
 			</div>
 			<div class="clear"></div>
 		</section>
-		
+		<hr>
 		<section>
 			<div class="sectionTitle">
 				<h1>Key Skills</h1>
@@ -71,7 +71,8 @@
 				</ul>
 			</div>
 			<div class="clear"></div>
-		</section>	
+		</section>
+		<hr>	
 		<section>
 			<div class="sectionTitle">
 				<h1>Education</h1>
@@ -98,4 +99,4 @@
 </cfoutput>
 </cfdocument>
 <cfheader name="Content-Disposition" value="attachment;filename=file.pdf">
-<cfcontent type="application/octet-stream" file="#expandPath('.')#\file.pdf" deletefile="Yes">
+<cfcontent type="application/octet-stream" file="#expandPath('.')#\file.pdf" deletefile="No">

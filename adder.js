@@ -126,10 +126,12 @@ function removeEducation(){
     else{
         let child = document.getElementById("Education_"+k);
         let parent = document.getElementById("collegeSection");
-        let lb = document.getElementById("lb1_"+k);
+        let lb = document.getElementById("lb_"+k);
+        let lb1 = document.getElementById("lb1_"+k);
         let lb2 = document.getElementById("lb2_"+k);
         parent.removeChild(child);
         parent.removeChild(lb);
+        parent.removeChild(lb1);
         parent.removeChild(lb2);
         decrementEducation();
     }
